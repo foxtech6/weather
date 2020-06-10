@@ -1,0 +1,7 @@
+weather_url: null # endpoint api openweathermap
+weather_key: null # openweathermap api key
+from: Test # from whom sms come
+sms_url: null# sms enpoint example: https://connect.routee.net/sms
+token_url: null # routee token url
+token_key: null # token key see: https://docs.routee.net/docs#example
+different_kelvin_celsius: 273

@@ -1,0 +1,23 @@
+{
+  "name": "foxtech/weather",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "foxtech",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+    "ext-yaml": "*",
+    "ext-json": "*",
+    "ext-curl": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Src\\": "src"
+    },
+    "files": ["functions.php"]
+  }
+}
