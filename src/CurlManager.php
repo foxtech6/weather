@@ -2,22 +2,42 @@
 
 namespace Src;
 
-class CurlManager
+/**
+ * Class CurlManager
+ *
+ * @author Mykhailo Bavdys <bavdysmyh@ukr.net>
+ * @since 10.06.2020
+ */
+class CurlManager implements RequestInterface
 {
-    public const UNAUTHORIZED_CODE = 401;
-    public const SERVICE_UNAVAILABLE_CODE = 401;
+    /**
+     * Response from request
+     *
+     * @var string
+     */
     private $response;
+
+    /**
+     * Response code
+     *
+     * @var int
+     */
     private $code;
-    public function request(string $url, $fields = null, array $headers = []): self
+
+    /**
+     * {@inheritDoc}
+     * @see RequestInterface::send
+     */
+    public function send(string $url, string $fields = null, array $headers = null): RequestInterface
     {
         $curl = curl_init($url);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
-        if (!empty($fields)) {
+        if ($fields) {
             curl_setopt($curl, CURLOPT_POSTFIELDS, $fields);
         }
 
-        if (!empty($headers)) {
+        if ($headers) {
             curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
         }
 
@@ -30,7 +50,9 @@ class CurlManager
     }
 
     /**
-     * @return mixed
+     * Get response
+     *
+     * @return string
      */
     public function getResponse(): string
     {
@@ -38,7 +60,9 @@ class CurlManager
     }
 
     /**
-     * @return mixed
+     * Get response code
+     *
+     * @return int
      */
     public function getCode(): int
     {

@@ -3,8 +3,13 @@
 namespace Src\Exceptions;
 
 use Exception;
-use Src\CurlManager;
 
+/**
+ * Class SmsSenderException
+ *
+ * @author Mykhailo Bavdys <bavdysmyh@ukr.net>
+ * @since 10.06.2020
+ */
 class SmsSenderException extends Exception
 {
 

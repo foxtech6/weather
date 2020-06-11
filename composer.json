@@ -1,12 +1,12 @@
 {
-  "name": "foxtech/weather",
-  "description": "description",
+  "name": "foxtech6/weather",
+  "description": "",
   "minimum-stability": "stable",
   "license": "proprietary",
   "authors": [
     {
-      "name": "foxtech",
-      "email": "email@example.com"
+      "name": "Mykhailo",
+      "email": "bavdysmyh@ukr.net"
     }
   ],
   "require": {
