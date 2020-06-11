@@ -3,7 +3,6 @@
 namespace Src;
 
 use Throwable;
-
 use Src\Exceptions\SmsSenderException;
 
 /**
